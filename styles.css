@@ -1,10 +1,17 @@
 /* styles.css */
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  will-change: scroll-position;
+}
+
+[data-aos] {
+  will-change: transform, opacity;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 * {
@@ -615,6 +622,33 @@ nav ul {
     color: #aaa;
 }
 
+.tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tagline span {
+  display: inline;
+  margin-right: 20px;
+  color: #1a1a1a;
+}
+
+.tagline i {
+  margin-right: 8px;
+  color: #007bff; /* You can change icon color */
+}
+
+/* Responsive: stack each on mobile */
+@media (max-width: 600px) {
+  .tagline span {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+
 
 @media screen and (max-width: 768px) {
     nav ul {
@@ -631,10 +665,32 @@ nav ul {
     .about-text {
         width: 100%;
     }
+
+    .about-info-name {
+        font-size: 1.5rem !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-heading .section-title {
+        font-size: 2rem !important;
+    }
 }
 
 .mobile-menu-btn {
-    display: none; /* Hide by default (desktop view) */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-scrolled {
+    color: black;
 }
 
 nav.scrolled {
@@ -840,15 +896,13 @@ nav.scrolled .logo {
         display: flex;
     }
 
+    .logo {
+        font-size: 1.5rem !important;
+    }
+
     .mobile-menu-btn {
         display: block;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        position: absolute;
-        top: 1.5rem;
-        right: 2rem;
-        z-index: 1001;
+        top: 0.5rem;
     }
 
     .hero {
@@ -875,6 +929,7 @@ nav.scrolled .logo {
 
     .service-boxes {
         grid-template-columns: 1fr;
+        padding: 0px !important;
     }
 
     .footer-content {
@@ -893,6 +948,14 @@ nav.scrolled .logo {
 
     .services h2 {
         font-size: 28px;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+
+    nav.scrolled ul li a {
+        color: white;
     }
 }
 

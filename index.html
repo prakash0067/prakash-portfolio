@@ -63,8 +63,14 @@
                 <img src="my-pic.jpg" alt="Prakash Sirvi" loading="lazy" />
             </div>
             <div class="about-text" data-aos="fade-left" data-aos-duration="500" data-aos-offset="80">
-                <h2><span>Hello! I'm</span> Prakash Sirvi</h2>
-                <h3>• Software Developer • MCA Scholar • Tech Enthusiast</h3>
+                <h2 class="about-info-name"><span>Hello! I'm &nbsp;</span> Prakash Sirvi</h2>
+                <h3 class="tagline">
+                    <span><i class="fas fa-code"></i> Software Developer</span>
+                    <span><i class="fas fa-user-graduate"></i> MCA Scholar</span>
+                    <span><i class="fas fa-bolt"></i> Tech Enthusiast</span>
+                </h3>
+
+
                 <p>
                     A passionate software developer, currently pursuing my <strong>MCA at Jain University,
                         Bangalore</strong>.
@@ -85,8 +91,8 @@
                 </div>
 
                 <div class="contact">
-                    <p><i class="fa-solid fa-phone"></i> +91 7383308167</p>
-                    <p><i class="fa-solid fa-envelope"></i> personalprakash200@email.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7*********</p>
+                    <p><i class="fa-solid fa-envelope"></i> p************@email.com</p>
                 </div>
 
                 <a href="#portfolio" class="btn-primary explore-work-btn">Explore My Work</a>
@@ -148,7 +154,7 @@
                         <h3>LeanersSPOT – LMS</h3>
                         <p>A centralized LMS for universities with secure quizzes, discussion forums, progress tracking
                             & batch enrollment.</p>
-                        <a href="project-details/leanersspot.html" class="btn-view">View Project →</a>
+                        <a href="pages/learnersspot.html" class="btn-view">View Project →</a>
                     </div>
                 </div>
 
@@ -159,7 +165,7 @@
                         <h3>BookMark – Book Lost & Found</h3>
                         <p>Track lost academic books with auto-receipts, fine reports, logging, admin dashboard, and
                             real-time monitoring.</p>
-                        <a href="project-details/bookmark.html" class="btn-view">View Project →</a>
+                        <a href="pages/bookmark.html" class="btn-view">View Project →</a>
                     </div>
                 </div>
 
@@ -206,24 +212,26 @@
                 <div class="image-wrapper">
                     <img src="img/datawarehouse-1.jpeg" alt="Data Warehouse Automation Blog" />
                 </div>
-                <div class="meta"><span class="category">Blog</span> • <span class="date">June 2025</span></div>
+                <div class="meta"><span class="category">Blog</span> • <span class="date">Jan 2024</span></div>
                 <h3>Data Warehouse Automation (DWA)</h3>
                 <p>Simplifies and automates business data management. Like a digital assistant that helps extract
                     insights from
                     large datasets without manual effort.</p>
-                <a href="#" class="read-more">+ Read More</a>
+                <a href="https://prakash-datawarehouseautomation.blogspot.com/2024/01/data-warehouse-automation.html"
+                    class="read-more">+ Read More</a>
             </div>
             <!-- Entry 2 -->
             <div class="entry" data-aos="fade-up" data-aos-delay="300">
                 <div class="image-wrapper">
                     <img src="img/datawarehouse-2.jpeg" alt="Data Drilling Blog" />
                 </div>
-                <div class="meta"><span class="category">Blog</span> • <span class="date">June 2025</span></div>
+                <div class="meta"><span class="category">Blog</span> • <span class="date">Apr 2025</span></div>
                 <h3>Data Drilling in Web Mining</h3>
                 <p>A practical guide to discover patterns in web data using MySQL and simple logic. Learn how to drill
                     deeper
                     and extract meaningful insights.</p>
-                <a href="#" class="read-more">+ Read More</a>
+                <a href="https://prakash-datawarehouseautomation.blogspot.com/2025/04/data-drilling-in-web-mining-practical.html"
+                    class="read-more">+ Read More</a>
             </div>
             <!-- Entry 3 -->
             <div class="entry" data-aos="fade-up" data-aos-delay="400">
@@ -236,7 +244,7 @@
                 <p>This paper explores MEC handoff strategies, reviewing architecture, algorithms, and unresolved
                     challenges in
                     seamless edge transitions.</p>
-                <a href="#" class="read-more">+ Read More</a>
+                <a href="pages/research-paper.html" class="read-more">+ Read More</a>
             </div>
         </div>
     </section>
@@ -266,8 +274,8 @@
                     </div>
                     <div class="contact-info">
                         <h4>Contact Info</h4>
-                        <p><i class="fas fa-phone-alt"></i> +91 7383308167</p>
-                        <p><i class="fas fa-envelope"></i> personalprakash200@email.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 7*********</p>
+                        <p><i class="fas fa-envelope"></i> p************@email.com</p>
                         <p><i class="fas fa-map-marker-alt"></i> Bangalore - Karnataka, India</p>
                     </div>
                 </div>
@@ -286,10 +294,13 @@
 
     <script>
         AOS.init({
-            duration: 400, // Reduce duration for faster animations
-            once: true,
-            easing: 'ease-out',
-            offset: 50, // Trigger animations earlier
+            duration: 600,          // Animation duration (ms)
+            easing: 'ease-out',     // Smooth ease
+            once: true,             // Animate only once (improves performance)
+            mirror: false,          // Don't animate on scroll-up
+            offset: 100,            // Trigger slightly earlier
+            debounceDelay: 50,      // Debounce delay (for scroll)
+            throttleDelay: 99       // Throttle delay (for resize)
         });
 
         const swiper = new Swiper(".mySwiper", {
@@ -322,19 +333,44 @@
     <script>
         const menuToggle = document.getElementById("menu-toggle");
         const nav = document.querySelector("nav ul");
+        const navLinks = document.querySelectorAll("nav ul li a");
 
+        // Toggle menu on icon click
         menuToggle.addEventListener("click", () => {
             nav.classList.toggle("open");
             menuToggle.classList.toggle("active");
         });
+
+        // Close menu when any nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                menuToggle.classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside the nav
+        document.addEventListener("click", (event) => {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideNav && !isClickOnToggle) {
+                nav.classList.remove("open");
+                menuToggle.classList.remove("active");
+            }
+        });
+
+
 
         const navbar = document.querySelector("nav");
 
         window.addEventListener("scroll", () => {
             if (window.scrollY > 80) {
                 navbar.classList.add("scrolled");
+                menuToggle.classList.add("menu-scrolled");
             } else {
                 navbar.classList.remove("scrolled");
+                menuToggle.classList.remove("menu-scrolled");
             }
         });
     </script>

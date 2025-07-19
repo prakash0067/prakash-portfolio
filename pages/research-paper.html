@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Paper</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        as="style">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="new-styles.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        .research-paper-section {
+            padding: 80px 20px;
+            background: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .research-paper-section .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .paper-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+
+        .paper-authors {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+
+        .pdf-embed iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .pdf-embed iframe {
+                height: 60vh;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .paper-title {
+                font-size: 1rem;
+            }
+
+            .paper-authors {
+                font-size: 0.95rem;
+            }
+
+            .project-about-section .section-title {
+                margin-bottom: 0px !important;
+            }
+
+            .project-about-section {
+                padding-top: 2rem !important;
+            }
+
+            .project-title {
+                font-size: 1.1rem !important;
+            }
+
+            .project-about-card .project-name, .section-title {
+                font-size: 1.7rem !important;
+            }
+
+            .project-summary {
+                text-align: justify;
+            }
+
+            .project-about-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">PSDEV</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research-paper">Paper</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu-btn" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- HEADER -->
+    <header class="hero-project" data-aos="fade-in">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../img/research-paper.png" alt="Slide 1" />
+                </div>
+            </div>
+
+            <!-- Optional Navigation -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="overlay">
+            <div class="hero-content-wrapper">
+                <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+                    <h1>Research Paper</h1>
+                    <p>❝An Analysis of Handover Techniques, Management, and Challenges in Edge Computing at Multiple
+                        Access❞</p>
+                    <a href="#research-paper" class="btn-primary">Paper</a>
+                    <a href="#about" class="btn-secondary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="project-about-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="project-about-card">
+                <div class="image-container">
+                    <img src="../img/rm-presentation.jpg" alt="LearnersSPOT Screenshot">
+                </div>
+                <div class="content-container">
+                    <h3 class="project-name">Research Paper</h3>
+                    <h4 class="project-title">An Analysis of Handover Techniques, Management, and Challenges in Edge
+                        Computing at Multiple Access Points</h4>
+                    <p class="project-summary">
+                        This paper explores the critical role of handover techniques in Multi-Access Edge Computing
+                        (MEC), which operates at the network edge to deliver low-latency services to end users. A
+                        primary focus is on how handoff strategies enable the seamless migration of device and
+                        application data between MEC nodes, a fundamental requirement for supporting device mobility.
+                        The research also reviews the challenges and methods associated with MEC handover, including
+                        resource allocation at the target node and the migration of application contexts. This work
+                        highlights the importance of combining handover techniques with MEC node selection to ensure
+                        smooth transitions and maintain a high quality of experience for users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-paper-section" id="research-paper">
+        <div class="container">
+            <div class="paper-content" data-aos="fade-up">
+                <h2 class="section-title">📄 Research Publication</h2>
+                <h3 class="paper-title">
+                    An Analysis of Handover Techniques, Management, and Challenges in Edge Computing at Multiple Access
+                    Points
+                </h3>
+                <p class="paper-authors">
+                    <strong>Saket Nandan</strong>: PG Scholar, School of CS and IT, Jain (Deemed-to-be University),
+                    Bangalore<br />
+                    <strong>Prakash Sirvi</strong>: PG Scholar, School of CS and IT, Jain (Deemed-to-be University),
+                    Bangalore<br />
+                    <strong>Ranganath R.</strong>: PG Scholar, School of CS and IT, Jain (Deemed-to-be University),
+                    Bangalore<br />
+                    <strong>Dr. Gobi Natesan</strong>: Assistant Professor, School of CS and IT, Jain (Deemed-to-be
+                    University), Bangalore
+                </p>
+            </div>
+            <div class="pdf-embed" data-aos="fade-up">
+                <iframe
+                    src="../paper/An_Analysis_of_Handover_Techniques_Management_and_Challenges_in_Edge_Computing_at_Multiple_Access_Po.pdf"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer data-aos="fade-up" class="site-footer" id="contact">
+        <div class="footer-content">
+            <div class="left">
+                <h3>PSDEV</h3>
+                <p>Crafting impactful software solutions with clean code, scalable systems, and creativity.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="footer-grid">
+                    <div class="links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Contact Info</h4>
+                        <p><i class="fas fa-phone-alt"></i> +91 7*********</p>
+                        <p><i class="fas fa-envelope"></i> p************@email.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bangalore - Karnataka, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Prakash Sirvi. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- JS LIBRARIES -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 600,          // Animation duration (ms)
+            easing: 'ease-out',     // Smooth ease
+            once: true,             // Animate only once (improves performance)
+            mirror: false,          // Don't animate on scroll-up
+            offset: 100,            // Trigger slightly earlier
+            debounceDelay: 50,      // Debounce delay (for scroll)
+            throttleDelay: 99       // Throttle delay (for resize)
+        });
+
+    </script>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav ul");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        // Toggle menu on icon click
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            menuToggle.classList.toggle("active");
+        });
+
+        // Close menu when any nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                menuToggle.classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside the nav
+        document.addEventListener("click", (event) => {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideNav && !isClickOnToggle) {
+                nav.classList.remove("open");
+                menuToggle.classList.remove("active");
+            }
+        });
+
+        const navbar = document.querySelector("nav");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add("scrolled");
+                menuToggle.classList.add("menu-scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+                menuToggle.classList.remove("menu-scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
