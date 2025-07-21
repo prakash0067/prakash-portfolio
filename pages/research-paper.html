@@ -60,6 +60,12 @@
             padding: 0 15px;
         }
 
+        .pdf-embed {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling for iOS */
+        }
+
         .pdf-embed iframe {
             width: 100%;
             height: 80vh;
@@ -67,6 +73,8 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
             background: white;
+            pointer-events: auto;
+            overflow: scroll;
         }
 
         @media (max-width: 768px) {
@@ -98,7 +106,8 @@
                 font-size: 1.1rem !important;
             }
 
-            .project-about-card .project-name, .section-title {
+            .project-about-card .project-name,
+            .section-title {
                 font-size: 1.7rem !important;
             }
 

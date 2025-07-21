@@ -75,7 +75,7 @@
                 <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
                     <h1>Leaners SPOT</h1>
                     <p>Better Solutions For Education</p>
-                    <a href="#services" class="btn-primary">Demo</a>
+                    <a href="#services" class="btn-primary" id="app-demo">Demo</a>
                     <a href="#about" class="btn-secondary">View Details</a>
                 </div>
             </div>
@@ -408,6 +408,15 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script>
         const players = Plyr.setup('.plyr-video');
+    </script>
+
+    <script>
+        document.querySelectorAll('#app-demo').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert('Work in Progress...');
+            });
+        });
     </script>
 
 </body>

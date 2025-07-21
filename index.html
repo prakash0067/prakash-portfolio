@@ -59,8 +59,8 @@
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-img" data-aos="fade-right">
-                <img src="my-pic.jpg" alt="Prakash Sirvi" loading="lazy" />
+            <div class="about-img" data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
+                <img src="my-pic.jpg" alt="Prakash Sirvi" loading="eager" />
             </div>
             <div class="about-text" data-aos="fade-left" data-aos-duration="500" data-aos-offset="80">
                 <h2 class="about-info-name"><span>Hello! I'm &nbsp;</span> Prakash Sirvi</h2>
@@ -92,11 +92,7 @@
 
                 <div class="contact">
                     <p><i class="fa-solid fa-phone"></i> +91 7*********</p>
-<<<<<<< HEAD
                     <p><i class="fa-solid fa-envelope"></i> p************@email.com</p>
-=======
-                    <p><i class="fa-solid fa-envelope"></i> **********@email.com</p>
->>>>>>> 7fccc0b1e340c36f9e1e6bdc5df93e81009f5e46
                 </div>
 
                 <a href="#portfolio" class="btn-primary explore-work-btn">Explore My Work</a>
@@ -114,7 +110,7 @@
             <div class="box" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-code service-icon"></i>
                 <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, React, Node.js, Express</p>
+                <p>HTML, CSS, JavaScript, PHP, .NET, JSP, Servlets</p>
             </div>
             <div class="box" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-server service-icon"></i>
@@ -124,12 +120,12 @@
             <div class="box" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-brain service-icon"></i>
                 <h3>Competitive Programming</h3>
-                <p>C++, Data Structures, Algorithms, HackerRank, LeetCode</p>
+                <p>Java, Data Structures, Algorithms, HackerRank, LeetCode</p>
             </div>
             <div class="box" data-aos="fade-up" data-aos-delay="500">
                 <i class="fas fa-mobile-alt service-icon"></i>
                 <h3>App Development</h3>
-                <p>Android (Java), cross-platform experimentation</p>
+                <p>Android Development (Java)</p>
             </div>
             <div class="box" data-aos="fade-up" data-aos-delay="600">
                 <i class="fas fa-cloud service-icon"></i>
@@ -180,7 +176,7 @@
                         <h3>Inventra – Inventory & Billing</h3>
                         <p>Android app for barcode-based inventory, bills, analytics & dashboards for managing purchases
                             and stock alerts.</p>
-                        <a href="project-details/inventra.html" class="btn-view">View Project →</a>
+                        <a href="pages/inventra.html" class="btn-view">View Project →</a>
                     </div>
                 </div>
 
@@ -191,7 +187,7 @@
                         <h3>Paisafy – Expense Tracker</h3>
                         <p>Offline finance app with logging, filters, smart reports, To-Do integration, budget planning,
                             reminders, and a slick interface for users.</p>
-                        <a href="project-details/paisafy.html" class="btn-view">View Project →</a>
+                        <a href="pages/paisafy.html" class="btn-view">View Project →</a>
                     </div>
                 </div>
             </div>
@@ -253,6 +249,77 @@
         </div>
     </section>
 
+    <!-- ACHIEVEMENTS -->
+    <section class="portfolio-slider-section" id="achievements">
+        <h2 class="section-title" data-aos="fade-up">Achievements & Certificates</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Recognitions, awards, and milestones in my academic & professional journey
+        </p>
+
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper">
+
+                <!-- Achievement 1 -->
+                <div class="swiper-slide project-card">
+                    <img src="img/gold-medalist.jpg" alt="Gold Medal BCA" />
+                    <div class="card-content">
+                        <h3>BCA Gold Medalist (2021)</h3>
+                        <p>Awarded Gold Medal with 9.74 CGPA at Uka Tarsadia University for academic excellence in BCA.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="swiper-slide project-card">
+                    <img src="img/mined-hackathon-certificate.jpeg" alt="MINeD Hackathon Winner" />
+                    <div class="card-content">
+                        <h3>Winner – MINeD Hackathon 2024</h3>
+                        <p>Won in Open Innovations Track at Nirma University's national-level hackathon for building an
+                            LMS platform.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="swiper-slide project-card">
+                    <img src="img/mkcis-web-competition.jpg" alt="Web Competition MKCIS" />
+                    <div class="card-content">
+                        <h3>Web Design Winner – MKCIS</h3>
+                        <p>Secured 1st position in Web Development competition at MKCIS Bharuch, Gujarat, on 24 Feb
+                            2024.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="swiper-slide project-card">
+                    <img src="img/data-engineering-certificate.jpeg" alt="Informatica Hackathon" />
+                    <div class="card-content">
+                        <h3>Informatica Hackathon 2024</h3>
+                        <p>Participated in the Informatica Data Engineering Hackathon – a valuable hands-on innovation
+                            experience.</p>
+                    </div>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="swiper-slide project-card">
+                    <img src="img/competitions.jpg" alt="Competitions" />
+                    <div class="card-content">
+                        <h3>Tech Event Participation</h3>
+                        <p>Actively participated in national-level web, Android, and quiz competitions, enhancing
+                            real-world development skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination" style="margin-top: 30px;"></div>
+        </div>
+    </section>
+
+
     <!-- FOOTER -->
     <footer data-aos="fade-up" class="site-footer" id="contact">
         <div class="footer-content">
@@ -279,11 +346,7 @@
                     <div class="contact-info">
                         <h4>Contact Info</h4>
                         <p><i class="fas fa-phone-alt"></i> +91 7*********</p>
-<<<<<<< HEAD
                         <p><i class="fas fa-envelope"></i> p************@email.com</p>
-=======
-                        <p><i class="fas fa-envelope"></i> *********@email.com</p>
->>>>>>> 7fccc0b1e340c36f9e1e6bdc5df93e81009f5e46
                         <p><i class="fas fa-map-marker-alt"></i> Bangalore - Karnataka, India</p>
                     </div>
                 </div>
@@ -295,20 +358,16 @@
         </div>
     </footer>
 
-
     <!-- JS LIBRARIES -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
         AOS.init({
-            duration: 600,          // Animation duration (ms)
-            easing: 'ease-out',     // Smooth ease
-            once: true,             // Animate only once (improves performance)
-            mirror: false,          // Don't animate on scroll-up
-            offset: 100,            // Trigger slightly earlier
-            debounceDelay: 50,      // Debounce delay (for scroll)
-            throttleDelay: 99       // Throttle delay (for resize)
+            duration: 500,
+            once: true,
+            offset: 120,
+            easing: 'ease-in-out'
         });
 
         const swiper = new Swiper(".mySwiper", {
@@ -368,8 +427,6 @@
             }
         });
 
-
-
         const navbar = document.querySelector("nav");
 
         window.addEventListener("scroll", () => {
@@ -382,9 +439,6 @@
             }
         });
     </script>
-
-    </script>
-
 </body>
 
 </html>

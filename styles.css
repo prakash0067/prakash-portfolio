@@ -1,12 +1,13 @@
 /* styles.css */
 html, body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   will-change: scroll-position;
+  overflow-x: clip;
 }
 
 [data-aos] {
   will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 html {
@@ -36,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-bottom: 1px;
 }
 
 
@@ -293,6 +295,10 @@ nav ul {
     .service-boxes {
         grid-template-columns: 1fr;
         /* Stack vertically on small screens */
+    }
+
+    .section-heading, .section-title {
+        font-size: 28px !important;
     }
 }
 
@@ -687,6 +693,7 @@ nav ul {
     border-radius: 4px;
     cursor: pointer;
     display: none;
+    font-size: 1.5rem; 
 }
 
 .menu-scrolled {

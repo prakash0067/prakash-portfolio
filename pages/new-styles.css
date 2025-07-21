@@ -1,7 +1,6 @@
 /* styles.css */
 html,
-body {
-    overflow-x: hidden;
+body { 
     scroll-behavior: smooth;
     will-change: scroll-position;
 }
@@ -251,6 +250,7 @@ nav ul {
     border-radius: 4px;
     cursor: pointer;
     display: none;
+    font-size: 1.5rem;
 }
 
 .menu-scrolled {
