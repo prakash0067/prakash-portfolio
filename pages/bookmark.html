@@ -38,6 +38,10 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#app-gallery">Images</a></li>
             <li><a href="#project-videos">Videos</a></li>
+
+            <li class="dark-toggle">
+                <i class="fas fa-moon" id="theme-toggle" title="Toggle Theme"></i>
+            </li>
         </ul>
     </nav>
 
@@ -103,6 +107,9 @@
         </div>
     </section>
 
+    <div class="section-divider">
+        <div class="separator-line"></div>
+    </div>
 
     <!-- Features -->
     <section id="features" class="services">
@@ -144,7 +151,9 @@
         </div>
     </section>
 
-
+    <div class="section-divider">
+        <div class="separator-line"></div>
+    </div>
 
     <section id="app-gallery" class="gallery-section">
         <h2 data-aos="fade-up" class="section-title">App Screens</h2>
@@ -190,6 +199,9 @@
         </div>
     </section>
 
+    <div class="section-divider">
+        <div class="separator-line"></div>
+    </div>
 
     <section class="project-video-section" id="project-videos">
         <h2 class="section-title" data-aos="fade-up">Project Demo Videos</h2>
@@ -366,6 +378,36 @@
                 alert('Work in Progress...');
             });
         });
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const currentTheme = getCookie('theme') || 'light';
+
+        // Apply theme on load
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleBtn.classList = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+        // Toggle theme on click
+        toggleBtn.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            toggleBtn.classList = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            setCookie('theme', newTheme, 365);
+        });
+
+        // Cookie helpers
+        function setCookie(name, value, days) {
+            const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+            document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            return parts.length === 2 ? parts.pop().split(';').shift() : null;
+        }
     </script>
 </body>
 

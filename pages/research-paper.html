@@ -25,100 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <style>
-        .research-paper-section {
-            padding: 80px 20px;
-            background: #f9f9f9;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .research-paper-section .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #222;
-        }
-
-        .paper-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #444;
-            margin-bottom: 20px;
-            padding: 0 10px;
-            line-height: 1.5;
-        }
-
-        .paper-authors {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 40px;
-            padding: 0 15px;
-        }
-
-        .pdf-embed {
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            /* Smooth scrolling for iOS */
-        }
-
-        .pdf-embed iframe {
-            width: 100%;
-            height: 80vh;
-            border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            background: white;
-            pointer-events: auto;
-            overflow: scroll;
-        }
-
-        @media (max-width: 768px) {
-            .pdf-embed iframe {
-                height: 60vh;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-            }
-
-            .paper-title {
-                font-size: 1rem;
-            }
-
-            .paper-authors {
-                font-size: 0.95rem;
-            }
-
-            .project-about-section .section-title {
-                margin-bottom: 0px !important;
-            }
-
-            .project-about-section {
-                padding-top: 2rem !important;
-            }
-
-            .project-title {
-                font-size: 1.1rem !important;
-            }
-
-            .project-about-card .project-name,
-            .section-title {
-                font-size: 1.7rem !important;
-            }
-
-            .project-summary {
-                text-align: justify;
-            }
-
-            .project-about-card {
-                padding: 30px;
-            }
-        }
+        
     </style>
 </head>
 
@@ -129,6 +36,9 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#research-paper">Paper</a></li>
+            <li class="dark-toggle">
+                <i class="fas fa-moon" id="theme-toggle" title="Toggle Theme"></i>
+            </li>
         </ul>
     </nav>
 
@@ -187,6 +97,10 @@
         </div>
     </section>
 
+    <div class="section-divider">
+        <div class="separator-line"></div>
+    </div>
+
     <section class="research-paper-section" id="research-paper">
         <div class="container">
             <div class="paper-content" data-aos="fade-up">
@@ -212,7 +126,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer data-aos="fade-up" class="site-footer" id="contact">
@@ -313,6 +226,35 @@
         });
     </script>
 
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const currentTheme = getCookie('theme') || 'light';
+
+        // Apply theme on load
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleBtn.classList = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+        // Toggle theme on click
+        toggleBtn.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            toggleBtn.classList = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            setCookie('theme', newTheme, 365);
+        });
+
+        // Cookie helpers
+        function setCookie(name, value, days) {
+            const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+            document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            return parts.length === 2 ? parts.pop().split(';').shift() : null;
+        }
+    </script>
 </body>
 
 </html>

@@ -1,8 +1,41 @@
 /* styles.css */
 html,
-body { 
+body {
     scroll-behavior: smooth;
     will-change: scroll-position;
+}
+
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #0ef;
+    --box-color: #f0f0f0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --bg-color-light: #1e1e1e;
+    --text-color-light-grey: #c2c2c2;
+    --text-color: #f5f5f5;
+    --accent-color: #0ef;
+    --box-color: #2c2c2c;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply variables globally */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--accent-color);
 }
 
 [data-aos] {
@@ -12,6 +45,11 @@ body {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+}
+
+.dark-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 * {
@@ -78,6 +116,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+}
+
+nav ul li i {
+    color: white;
+    transition: color 0.3s ease;
 }
 
 nav ul {
@@ -260,7 +303,7 @@ nav ul {
 nav.scrolled {
     padding: 0.5rem 2rem;
     /* Reduce height when scrolled */
-    background-color: white;
+    background-color: var(--bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -277,12 +320,13 @@ nav {
 }
 
 nav.scrolled {
-    background-color: white;
+    background-color: var(--bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav.scrolled ul li a {
-    color: #333;
+nav.scrolled ul li a,
+nav.scrolled ul li i {
+    color: var(--text-color);
 }
 
 nav ul li a {
@@ -296,7 +340,7 @@ nav .logo {
 }
 
 nav.scrolled .logo {
-    color: #333;
+    color: var(--text-color);
 }
 
 /* responsiveness */
@@ -437,7 +481,7 @@ nav.scrolled .logo {
 /* project detail section  */
 .project-about-section {
     padding: 80px 20px;
-    background: #f0f4f8;
+    background: var(--bg-color);
     /* Light gray background */
     color: #000;
     font-family: 'Poppins', sans-serif;
@@ -445,9 +489,9 @@ nav.scrolled .logo {
 }
 
 .project-about-card {
-    background-color: #ffffff;
+    background-color: var(--shadow-color);
     /* White card */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px var(--shadow-color);
     /* Soft black shadow */
 }
 
@@ -455,7 +499,7 @@ nav.scrolled .logo {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 50px;
-    color: #121212;
+    color: var(--text-color);
     letter-spacing: 1px;
 }
 
@@ -464,9 +508,9 @@ nav.scrolled .logo {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: var(--bg-color-light);
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px var(--shadow-color);
     padding: 40px;
     gap: 40px;
     max-width: 1100px;
@@ -497,13 +541,13 @@ nav.scrolled .logo {
 .project-about-card .project-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #000000;
+    color: var(--text-color);
 }
 
 .project-about-card .project-summary {
     font-size: 1rem;
     line-height: 1.7;
-    color: #282828;
+    color: var(--text-color);
 }
 
 .project-about-card {
@@ -528,7 +572,7 @@ nav.scrolled .logo {
 
 /* features section  */
 .services {
-    background: #f0f4f8;
+    background: var(--bg-color);
     padding: 4rem 2rem;
     text-align: center;
     padding-top: 2rem !important;
@@ -538,13 +582,13 @@ nav.scrolled .logo {
 .services h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
 }
 
 .services .subheading {
     font-size: 1rem;
-    color: #666;
+    color: var(--text-color);
     margin-bottom: 2.5rem;
 }
 
@@ -571,10 +615,10 @@ nav.scrolled .logo {
 }
 
 .box {
-    background: white;
+    background: var(--bg-color);
     padding: 2rem 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 0;
@@ -586,7 +630,7 @@ nav.scrolled .logo {
     transform: scale(1.05) translateZ(0);
     /* ✅ force GPU */
     z-index: 10;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px var(--shadow-color);
 }
 
 .box h3 {
@@ -597,7 +641,7 @@ nav.scrolled .logo {
 }
 
 .box p {
-    color: #555;
+    color: var(--text-color-light-grey);
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -614,7 +658,7 @@ nav.scrolled .logo {
 
 .gallery-section {
     padding: 80px 50px;
-    background: #f0f4f8;
+    background: var(--bg-color);
     color: black;
     text-align: center;
     padding-top: 3rem !important;
@@ -622,6 +666,11 @@ nav.scrolled .logo {
 
 .gallery-section h2 {
     font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.gallery-section p {
+    color: var(--text-color-light-grey);
 }
 
 .masonry-gallery {
@@ -760,7 +809,7 @@ nav.scrolled .logo {
 /* video section  */
 .project-video-section {
     padding: 80px 50px;
-    background: #f8f9fc;
+    background: var(--bg-color);
     color: #000;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -769,7 +818,7 @@ nav.scrolled .logo {
 .project-video-section .section-title {
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #111;
+    color: var(--text-color);
 }
 
 .video-grid {
@@ -868,3 +917,120 @@ nav.scrolled .logo {
     }
 }
 
+/* Outer wrapper to control width & centering */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background-color: var(--bg-color);
+}
+
+/* Actual line */
+.separator-line {
+    width: 100%;
+    max-width: 1100px;
+    height: 2px;
+    background-color: var(--text-color);
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+
+
+/* ========================= */
+/* Research Paper Styles */
+
+.research-paper-section {
+    padding: 80px 20px;
+    background: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.research-paper-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.paper-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+.paper-authors {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.pdf-embed {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling for iOS */
+}
+
+.pdf-embed iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: white;
+    pointer-events: auto;
+    overflow: scroll;
+}
+
+@media (max-width: 768px) {
+    .pdf-embed iframe {
+        height: 60vh;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .paper-title {
+        font-size: 1rem;
+    }
+
+    .paper-authors {
+        font-size: 0.95rem;
+    }
+
+    .project-about-section .section-title {
+        margin-bottom: 0px !important;
+    }
+
+    .project-about-section {
+        padding-top: 2rem !important;
+    }
+
+    .project-title {
+        font-size: 1.1rem !important;
+    }
+
+    .project-about-card .project-name,
+    .section-title {
+        font-size: 1.7rem !important;
+    }
+
+    .project-summary {
+        text-align: justify;
+    }
+
+    .project-about-card {
+        padding: 30px;
+    }
+}
