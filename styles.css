@@ -1,62 +1,64 @@
 /* styles.css */
-html, body {
-  scroll-behavior: smooth;
-  will-change: scroll-position;
-  overflow-x: clip;
+html,
+body {
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+    overflow-x: clip;
 }
 
 * {
-  transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 :root {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --accent-color: #0ef;
-  --box-color: #f0f0f0;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #0ef;
+    --box-color: #f0f0f0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
-  --bg-color: #000000;
-  --bg-color-light: #1e1e1e;
-  --text-color-light-grey: #c2c2c2;
-  --text-color: #f5f5f5;
-  --accent-color: #0ef;
-  --box-color: #2c2c2c;
-  --shadow-color: rgba(255, 255, 255, 0.1);
+    --bg-color: #000000;
+    --bg-color-light: #1e1e1e;
+    --text-color-light-grey: #c2c2c2;
+    --text-color: #f5f5f5;
+    --accent-color: #0ef;
+    --box-color: #2c2c2c;
+    --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Apply variables globally */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 a {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .navbar,
 .footer,
 section {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .dark-toggle {
-  cursor: pointer;
-  font-size: 1.2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 
 [data-aos] {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 * {
@@ -84,7 +86,7 @@ body {
 
 
 .hero {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -170,7 +172,7 @@ nav ul {
 
 /* ABOUT */
 #about {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 .about {
@@ -338,7 +340,8 @@ nav ul {
         /* Stack vertically on small screens */
     }
 
-    .section-heading, .section-title {
+    .section-heading,
+    .section-title {
         font-size: 28px !important;
     }
 }
@@ -673,29 +676,30 @@ nav ul {
 }
 
 .tagline {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .tagline span {
-  display: inline;
-  margin-right: 20px;
-  color: var(--text-color);
+    display: inline;
+    margin-right: 20px;
+    color: var(--text-color);
 }
 
 .tagline i {
-  margin-right: 8px;
-  color: #007bff; /* You can change icon color */
+    margin-right: 8px;
+    color: #007bff;
+    /* You can change icon color */
 }
 
 /* Responsive: stack each on mobile */
 @media (max-width: 600px) {
-  .tagline span {
-    display: block;
-    margin: 10px 0;
-  }
+    .tagline span {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 
@@ -737,7 +741,7 @@ nav ul {
     border-radius: 4px;
     cursor: pointer;
     display: none;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 .menu-scrolled {
@@ -745,9 +749,10 @@ nav ul {
 }
 
 nav.scrolled {
-  padding: 0.5rem 2rem; /* Reduce height when scrolled */
-  background-color: var(--bg-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 2rem;
+    /* Reduce height when scrolled */
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Fixed navbar styling */
@@ -767,7 +772,8 @@ nav.scrolled {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav.scrolled ul li a, nav.scrolled ul li i {
+nav.scrolled ul li a,
+nav.scrolled ul li i {
     color: var(--text-color);
 }
 
@@ -961,6 +967,14 @@ nav.scrolled .logo {
         top: 0.5rem;
     }
 
+    .dark-toggle i {
+        color: white;
+    }
+
+    nav.scrolled ul li i {
+        color: white;
+    }
+
     .hero {
         flex-direction: column;
         justify-content: flex-start;
@@ -1013,6 +1027,10 @@ nav.scrolled .logo {
     nav.scrolled ul li a {
         color: white;
     }
+
+    .menu-scrolled {
+        color: var(--text-color);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1052,10 +1070,11 @@ nav.scrolled .logo {
 }
 
 .themed-separator {
-  display: block;
-  width: 80%;
-  height: 1px;
-  background-color: var(--text-color);
-  margin: 0.1rem auto; /* this centers it */
-  opacity: 0.2;
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: var(--text-color);
+    margin: 0.1rem auto;
+    /* this centers it */
+    opacity: 0.2;
 }

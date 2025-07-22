@@ -38,6 +38,14 @@ a {
     color: var(--accent-color);
 }
 
+.navbar,
+.footer,
+section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
 [data-aos] {
     will-change: transform, opacity;
 }
@@ -285,7 +293,7 @@ nav ul {
 
 .mobile-menu-btn {
     position: fixed;
-    top: 1rem;
+    /* top: 1rem; */
     right: 1rem;
     z-index: 9999;
     color: white;
@@ -377,7 +385,7 @@ nav.scrolled .logo {
 
     .mobile-menu-btn {
         display: block;
-        top: 0.5rem;
+        /* top: 0.5rem; */
     }
 
     .hero {
@@ -1032,5 +1040,13 @@ nav.scrolled .logo {
 
     .project-about-card {
         padding: 30px;
+    }
+
+    .menu-scrolled {
+        color: var(--text-color);
+    }
+
+    .dark-toggle i {
+        color: white !important;
     }
 }
